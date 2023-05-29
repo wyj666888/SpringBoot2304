@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<-- http://localhost:8080/index.html -->
+    <head>
+         <meta charset="UTF-8">
+         <title>我的首页</title>
+     </head>
+<body>
+<!--
+    <h>标签:<h1>--<h6> 一级标题--六级标题
+           标题文字加粗，各级标题字体从大到小，标题独占一行
+
+    <center>标签:【后期不会使用】，将标签中间的内容剧中显示
+
+    <input>:输入组件，是用来获取用户在页面上的输入的
+            type属性决定着该组件的样式
+            常见的:
+            type="text":文本框
+            type="password":密码框
+            type="button":按钮
+            type="submit":提交按钮(表单里使用)
+
+            单选框和复选框需要使用name属性分组，name属性值相同的组件看做一组
+            type="radio":单选框
+            type="checkbox":复选框
+     <a>:超链接，标签中间的文本就是超链接上提示的文字，href属性用于指定点击超链接后
+        跳转的路径。
+
+     <br>:换行
+
+     <table>:表格。属性border用于指定边框。
+            <table>标签中包含<tr>标签用于表示行
+            <tr>标签中包含<td>标签用于表示列
+            <td>标签中常见属性:
+            align:对其方式。left左对齐,right右对齐,center剧中对其
+            colspan:跨列合并列，合并是从左向右合并列
+            rowspan:跨行合并列，合并是从上向下合并列
+
+-->
+      <center>
+<h1>百度</h1>
+<input type="text" size="50" >
+          <input type="button" value="百度一下" onclick="alert('点你妹啊!')">
+          <br>
+          <!--
+       访问当前首页,在浏览器地址栏的路径:
+       http://localhost:8080/index.html
+              ^^^^^^^^^^^^^^
+              定位主机地址信息
+
+       http://localhost:8080/index.html
+                            ^^^^^^^^^^^
+                            资源的抽象路径
+
+       资源抽象路径最开始的"/",SpringBoot默认的配置是从static目录下根据该路径定位资源
+       http://localhost:8080/index.html
+                            ^
+                         static目录
+
+       在超链接中,如果我们定位的是本网站的其它资源时,href中指定路径通常从"/"开始,这里的
+       "/"就是URL中资源抽象路径中最开始的"/"
+       意味着,当我们指定超链接:
+       <a href="/reg.html">注册</a>
+       浏览器实际理解的路径全称:
+       http://localhost:8080/reg.html
+       ^^^^^^^^^^^^^^^^^^^^^
+       会沿用请求index.html时的主机地址信息
+       -->
+          <h3>
+          <a href="/reg.html">用户注册</a>
+          <a href="/loginUser.html">用户登录</a>
+          <a href="/userList">用户列表</a>
+          <br>
+          <a href="/classtable.html">课程表</a>
+          <br>
+          <a href="http://localhost:8080/writeArticle.html">发表文章</a>
+          <a href="/articleList">文章列表</a>
+           </h3><br>
+          <input type="radio" name="gender">男  <input type="radio" name="gender">女
+          <br>
+          <input type="checkbox" >游泳
+          <input type="checkbox" >游戏
+          <input type="checkbox" >看剧
+          <br>
+          <table border="5">
+              <tr>
+                  <td>第一列<td>
+                  <td>第二列</td>
+                  <td colspan="2" align="center">第三列</td>
+              </tr>
+              <tr>
+                  <td>第一列<td>
+                  <td rowspan="2">第二列</td>
+                  <td>第三列</td>
+                  <td>第四列</td>
+              </tr>
+              <tr>
+                  <td>第一列<td>
+
+                  <td>第三列</td>
+                  <td>第四列</td>
+              </tr>
+              <tr>
+                  <td>第一列<td>
+                  <td>第二列</td>
+                  <td>第三列</td>
+                  <td>第四列</td>
+              </tr>
+          </table>
+<h2>我是标题</h2>
+<h3>我是标题</h3>
+<h4>我是标题</h4>
+<h5>我是标题</h5>
+<h6>我是标题</h6>
+</center>
+</body>
+</html>
